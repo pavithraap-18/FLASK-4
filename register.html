@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend>Register</legend>
+                <div class="form-group">
+                    {{ form.username.label }} {{ form.username(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.email.label }} {{ form.email(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.password.label }} {{ form.password(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.confirm_password.label }} {{ form.confirm_password(class="form-control") }}
+                </div>
+            </fieldset>
+            {{ form.submit(class="btn btn-outline-info") }}
+        </form>
+    </div>
+{% endblock %}
